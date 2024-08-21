@@ -17,5 +17,10 @@ public abstract class Element {
 	 * @peerObject
 	 */
 	public Document getDocument() { return document; }
+	
+	/**
+	 * @post | result != null
+	 */
+	public String getTekstinhoud() { return tekstinhoud; }
 
 }
