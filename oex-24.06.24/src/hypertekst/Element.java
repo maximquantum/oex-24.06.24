@@ -7,7 +7,7 @@ import logicalcollections.LogicalList;
 
 public abstract class Element {
 	
-	final String tekstinhoud;
+	final String tekstinhoud; // done here
 	
 	/**
 	 * @representationObjects
