@@ -3,6 +3,8 @@ package hypertekst;
 import java.util.ArrayList;
 import java.util.List;
 
+import logicalcollections.LogicalList;
+
 public class Document {
 	
 	/**
@@ -24,5 +26,16 @@ public class Document {
 	 * @post | getElementen().isEmpty()
 	 */
 	public Document() {}
+	
+	/**
+	 * @pre | element != null
+	 * @pre | element.getDocument() == null
+	 * @mutates_proporties | getElementen(), element.getDocument()
+	 * @post | getElementen().equals(LogicalList.plus(old(getElementen()), element))
+	 */
+	public void addElement(Element element) {
+		elementen.add(element);
+		element.document = this;
+	}
 
 }
