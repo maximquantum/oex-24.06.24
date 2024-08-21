@@ -14,6 +14,9 @@ public class Document {
 	
 	/**
 	 * @peerObjects
+	 * 
+	 * @post | result != null
+	 * @post | result.stream().allMatch(e -> e != null && e.getDocument() == this)
 	 */
 	public List<Element> getElementen() { return List.copyOf(elementen); }
 	
