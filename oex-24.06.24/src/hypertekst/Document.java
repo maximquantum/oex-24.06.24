@@ -16,5 +16,10 @@ public class Document {
 	 * @peerObjects
 	 */
 	public List<Element> getElementen() { return List.copyOf(elementen); }
+	
+	/**
+	 * @post | getElementen().isEmpty()
+	 */
+	public Document() {}
 
 }
