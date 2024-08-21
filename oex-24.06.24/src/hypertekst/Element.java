@@ -3,6 +3,8 @@ package hypertekst;
 import java.util.HashSet;
 import java.util.Set;
 
+import logicalcollections.LogicalList;
+
 public abstract class Element {
 	
 	final String tekstinhoud;
@@ -40,4 +42,15 @@ public abstract class Element {
 	 * @peerObjects
 	 */
 	public Set<Hyperlink> getReferrers() { return Set.copyOf(referrers); }
+	
+	/**
+	 * @pre | getDocument() != null
+	 * @mutates_proporties | getDocument(), getDocument().getElementen()
+	 * @post | getDocument() == null
+	 * @post | old(getDocument()).getElementen().equals(LogicalList.minus(old(getDocument()).getElementen(), this)) 
+	 */
+	public void verwijderUitDocument() {
+		document.elementen.remove(this);
+		document = null;
+	}
 }
