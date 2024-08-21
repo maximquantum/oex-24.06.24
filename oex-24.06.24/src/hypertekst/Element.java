@@ -16,7 +16,7 @@ public abstract class Element {
 	/**
 	 * @peerObject
 	 */
-	public Document getDocument() { return document; }
+	public Document getDocument() { return document; } // done here
 	
 	/**
 	 * @post | result != null
