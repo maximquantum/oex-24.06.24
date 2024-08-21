@@ -34,4 +34,15 @@ public class Hyperlink extends Element {
 		this.doelelement = doelelement;
 		doelelement.referrers.add(this);
 	}
+	
+	/**
+	 * @pre | getDoelelement() != null
+	 * @mutates_proporties | getDoelelement(), getDoelelement().getReferrers()
+	 * @post | getDoelelement() == null
+	 * @post | old(getDoelelement()).getReferrers().equals(LogicalSet.minus(old(getDoelelement().getReferrers()), this))
+	 */
+	public void clearDoelelement() {
+		this.doelelement.referrers.remove(this);
+		this.doelelement = null;
+	}
 }
