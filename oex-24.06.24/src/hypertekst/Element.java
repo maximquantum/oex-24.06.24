@@ -7,7 +7,7 @@ import logicalcollections.LogicalList;
 
 public abstract class Element {
 	
-	final String tekstinhoud; // done here
+	final String tekstinhoud;
 	
 	/**
 	 * @representationObjects
@@ -52,5 +52,9 @@ public abstract class Element {
 	public void verwijderUitDocument() {
 		document.elementen.remove(this);
 		document = null;
+	}
+	
+	public boolean contentEquals(Element other) {
+		return tekstinhoud.equals(other.tekstinhoud);
 	}
 }
