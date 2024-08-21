@@ -19,6 +19,6 @@ public class Hyperlink extends Element {
 	/**
 	 * @peerObject
 	 */
-	public Element getDoelelement() { return doelelement; } // done here
+	public Element getDoelelement() { return doelelement; } 
 
 }
