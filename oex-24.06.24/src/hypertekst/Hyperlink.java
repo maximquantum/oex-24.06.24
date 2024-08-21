@@ -8,6 +8,10 @@ public class Hyperlink extends Element {
 	 */
 	Element doelelement;
 	
+	/**
+	 * @pre | tekstinhoud != null
+	 * @post | getTekstinhoud().equals(tekstinhoud)
+	 */
 	public Hyperlink(String tekstinhoud) {
 		super(tekstinhoud);
 	}
