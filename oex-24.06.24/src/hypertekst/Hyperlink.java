@@ -1,5 +1,7 @@
 package hypertekst;
 
+import logicalcollections.LogicalSet;
+
 public class Hyperlink extends Element {
 	
 	
@@ -7,6 +9,11 @@ public class Hyperlink extends Element {
 	 * @peerObject
 	 */
 	Element doelelement;
+	
+	/**
+	 * @peerObject
+	 */
+	public Element getDoelelement() { return doelelement; } 
 	
 	/**
 	 * @pre | tekstinhoud != null
@@ -17,8 +24,14 @@ public class Hyperlink extends Element {
 	}
 	
 	/**
-	 * @peerObject
+	 * @pre | getDoelelement() == null
+	 * @pre | doelelement != null
+	 * @mutates_proporties | getDoelelement(), doelelement.getReferrers()
+	 * @post | getDoelelement() == doelelement
+	 * @post | doelelement.getReferrers().equals(LogicalSet.plus(old(doelelement.getReferrers()), this))
 	 */
-	public Element getDoelelement() { return doelelement; } 
-
+	public void setDoelelement(Element doelelement) {
+		this.doelelement = doelelement;
+		doelelement.referrers.add(this);
+	}
 }
