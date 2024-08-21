@@ -16,11 +16,11 @@ public abstract class Element {
 	/**
 	 * @peerObject
 	 */
-	public Document getDocument() { return document; } // done here
+	public Document getDocument() { return document; } 
 	
 	/**
 	 * @post | result != null
 	 */
-	public String getTekstinhoud() { return tekstinhoud; }
+	public String getTekstinhoud() { return tekstinhoud; } // done here
 
 }
