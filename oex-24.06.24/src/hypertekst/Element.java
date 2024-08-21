@@ -57,4 +57,6 @@ public abstract class Element {
 	public boolean contentEquals(Element other) {
 		return tekstinhoud.equals(other.tekstinhoud);
 	}
+	
+	public abstract int getTekstueleVoorstelling(char[] buffer);
 }
