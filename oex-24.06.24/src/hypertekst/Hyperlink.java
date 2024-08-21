@@ -11,5 +11,10 @@ public class Hyperlink extends Element {
 	public Hyperlink(String tekstinhoud) {
 		super(tekstinhoud);
 	}
+	
+	/**
+	 * @peerObject
+	 */
+	public Element getDoelelement() { return doelelement; }
 
 }

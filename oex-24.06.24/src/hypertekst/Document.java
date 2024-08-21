@@ -6,8 +6,15 @@ import java.util.List;
 public class Document {
 	
 	/**
-	 * @peerObject
+	 * @representationObject
+	 * @peerObjects
 	 */
 	List<Element> elementen = new ArrayList<>();
+	
+	
+	/**
+	 * @peerObjects
+	 */
+	public List<Element> getElementen() { return List.copyOf(elementen); }
 
 }

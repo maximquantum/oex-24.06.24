@@ -12,5 +12,10 @@ public abstract class Element {
 	Element(String tekstinhoud) {
 		this.tekstinhoud = tekstinhoud;
 	}
+	
+	/**
+	 * @peerObject
+	 */
+	public Document getDocument() { return document; }
 
 }
